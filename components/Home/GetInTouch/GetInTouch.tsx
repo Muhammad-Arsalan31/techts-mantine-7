@@ -50,7 +50,7 @@ export function GetInTouch() {
               />
 
               <Group justify="flex-end" mt="md">
-                <Button type="submit" className={classes.control}>
+                <Button type="submit" className={classes.control} aria-label="Submit form button">
                   Send message
                 </Button>
               </Group>

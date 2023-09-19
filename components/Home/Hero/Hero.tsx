@@ -23,10 +23,14 @@ export function Hero() {
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
+          <Button className={classes.control} variant="white" size="lg" aria-label="Get Started">
             Get started
           </Button>
-          <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
+          <Button
+            className={cx(classes.control, classes.secondaryControl)}
+            size="lg"
+            aria-label="Live demo"
+          >
             Live demo
           </Button>
         </div>
