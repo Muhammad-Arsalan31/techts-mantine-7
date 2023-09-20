@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Container, Group, Burger, Title, Drawer, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
+import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
 
 const links = [
   { link: '/about', label: 'Features' },
@@ -37,9 +38,13 @@ export function Header() {
         </Title>
         <Group gap={5} visibleFrom="xs">
           {items}
+          <ColorSchemeToggle />
         </Group>
+        <Group hiddenFrom="xs">
+          <ColorSchemeToggle />
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+          <Burger opened={opened} onClick={toggle} size="sm" />
+        </Group>
       </Container>
       <Drawer opened={opened} onClose={toggle} title="Logo">
         {items}
